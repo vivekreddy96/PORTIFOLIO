@@ -1,17 +1,10 @@
 /**
  * O. Vivek Reddy - Personal Portfolio JS Interactions
  * Date: 2026-05-28
- * Features:
- *   - Dark/Light Theme Switching (Local Storage memory)
- *   - Scroll Indicator & Sticky Navigation
- *   - Dynamic Typing Animation
- *   - Responsive Mobile Hamburger Drawer
- *   - Projects Category Filter
- *   - Scroll Reveal via Intersection Observer
- *   - Automated Skill-bar Progress Fills on Sight
- *   - Full Form Input Verification & Feedback alerts
- *   - Project Demo Dialog Modal
+ * Framework: Vite + ESModules + GSAP
  */
+
+import { gsap } from 'gsap';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -54,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (canvas) {
     const ctx = canvas.getContext('2d');
     let particlesArray = [];
-    const maxParticles = 60; // Balanced performance index
+    const maxParticles = 65; // Balanced performance index
     
     let mouse = {
       x: null,
@@ -198,7 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Dark / Light Theme Controller
   // ==========================================================================
   const initTheme = () => {
-    // Check saved theme preference or system default
     const savedTheme = localStorage.getItem('portfolio-theme');
     
     if (savedTheme === 'light') {
@@ -214,10 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     body.classList.toggle('light-theme');
     const isLight = body.classList.contains('light-theme');
     
-    // Save to storage
     localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
-    
-    // Smooth transition rotation and icon swap
     themeIcon.style.transform = 'scale(0) rotate(180deg)';
     
     setTimeout(() => {
@@ -234,31 +223,48 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
 
   // ==========================================================================
-  // 3. Scroll Interactions: Sticky Nav, Indicator, Back-to-Top
+  // 3. GSAP Entry Animations (Ultra-Premium Viewport Entry)
+  // ==========================================================================
+  // Animate Hero Content Staggered
+  gsap.from('.hero-content > *', {
+    duration: 1,
+    opacity: 0,
+    y: 30,
+    stagger: 0.12,
+    ease: 'power3.out'
+  });
+
+  // Animate Hero Dashboard Card Slide-In
+  gsap.from('.terminal-window', {
+    duration: 1.2,
+    opacity: 0,
+    x: 50,
+    ease: 'power3.out',
+    delay: 0.3
+  });
+
+  // ==========================================================================
+  // 4. Scroll Interactions: Sticky Nav, Indicator, Back-to-Top
   // ==========================================================================
   const handleScroll = () => {
     const scrollTop = window.scrollY;
     const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
     
-    // Calculate Scroll Progress Percentage
     const scrolledPercentage = (scrollTop / documentHeight) * 100;
     scrollProgress.style.width = `${scrolledPercentage}%`;
     
-    // Sticky Header Addition
     if (scrollTop > 50) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
     
-    // Floating Back-to-Top Button Visibility
     if (scrollTop > 500) {
       backToTop.classList.add('visible');
     } else {
       backToTop.classList.remove('visible');
     }
 
-    // Active Section Link Highlighting
     const sections = document.querySelectorAll('section');
     let currentActive = 'home';
     
@@ -284,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 4. Custom Typewriter Animation
+  // 5. Custom Typewriter Animation (Hero Subtitle Role Loop)
   // ==========================================================================
   const typewriterElement = document.getElementById('typewriter');
   
@@ -301,21 +307,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isDeleting) {
         typewriterElement.textContent = currentRole.substring(0, charIndex - 1);
         charIndex--;
-        typingSpeed = 50; // Deleting is faster
+        typingSpeed = 50;
       } else {
         typewriterElement.textContent = currentRole.substring(0, charIndex + 1);
         charIndex++;
-        typingSpeed = 120; // Natural typing speed
+        typingSpeed = 120;
       }
 
-      // Check endpoints
       if (!isDeleting && charIndex === currentRole.length) {
-        // Pause at full word
         typingSpeed = 2000;
         isDeleting = true;
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
-        // Shift to next role word
         roleIndex = (roleIndex + 1) % roles.length;
         typingSpeed = 500;
       }
@@ -323,12 +326,11 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(type, typingSpeed);
     };
 
-    // Initiate
     setTimeout(type, 1000);
   }
 
   // ==========================================================================
-  // 5. Mobile Hamburger Drawer Menu Toggle
+  // 6. Mobile Hamburger Drawer Menu Toggle
   // ==========================================================================
   const toggleMobileMenu = () => {
     const isOpen = mobileToggle.classList.toggle('active');
@@ -344,12 +346,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   mobileToggle.addEventListener('click', toggleMobileMenu);
 
-  // Close when nav links are selected
   navLinks.forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
 
-  // Close menu if user clicks outside of drawer
   document.addEventListener('click', (event) => {
     if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target) && navMenu.classList.contains('active')) {
       closeMobileMenu();
@@ -357,11 +357,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 6. Project Card Categorized Filtering
+  // 7. Project Card Categorized Filtering
   // ==========================================================================
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Toggle button states
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       
@@ -372,38 +371,68 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (filterValue === 'all' || categories.includes(filterValue)) {
           card.style.display = 'flex';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'scale(1)';
-          }, 50);
+          gsap.fromTo(card, 
+            { opacity: 0, scale: 0.95 },
+            { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out', clearProps: 'transform' }
+          );
         } else {
-          card.style.opacity = '0';
-          card.style.transform = 'scale(0.95)';
-          // Delay display change until transition completes
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 350);
+          gsap.to(card, {
+            opacity: 0,
+            scale: 0.95,
+            duration: 0.3,
+            ease: 'power2.in',
+            onComplete: () => {
+              card.style.display = 'none';
+            }
+          });
         }
       });
     });
   });
 
   // ==========================================================================
-  // 7. Scroll Reveal & Skill Progress Fills (Intersection Observer)
+  // 8. Scroll Reveal & Skill Progress Fills (Intersection Observer + GSAP)
   // ==========================================================================
-  // Generic Section / Content Reveals
   const revealElements = document.querySelectorAll('.reveal');
   
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-        observer.unobserve(entry.target); // Reveal only once
+        
+        // Trigger refined GSAP stagger if it's the skills grid or projects grid
+        if (entry.target.classList.contains('skills-grid')) {
+          gsap.from(entry.target.querySelectorAll('.skills-card'), {
+            duration: 0.8,
+            opacity: 0,
+            y: 40,
+            stagger: 0.15,
+            ease: 'power3.out'
+          });
+        } else if (entry.target.classList.contains('projects-grid')) {
+          gsap.from(entry.target.querySelectorAll('.project-card'), {
+            duration: 0.8,
+            opacity: 0,
+            y: 40,
+            stagger: 0.15,
+            ease: 'power3.out'
+          });
+        } else if (entry.target.classList.contains('about-cards-column')) {
+          gsap.from(entry.target.querySelectorAll('.about-card'), {
+            duration: 0.8,
+            opacity: 0,
+            y: 30,
+            stagger: 0.12,
+            ease: 'power3.out'
+          });
+        }
+        
+        observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
   });
 
   revealElements.forEach(element => {
@@ -420,20 +449,24 @@ document.addEventListener('DOMContentLoaded', () => {
         if (entry.isIntersecting) {
           skillProgressFills.forEach(fill => {
             const width = fill.parentElement.previousElementSibling.querySelector('.skill-percentage').textContent;
-            fill.style.width = width;
+            gsap.to(fill, {
+              width: width,
+              duration: 1.5,
+              ease: 'power2.out'
+            });
           });
           observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.2
+      threshold: 0.15
     });
 
     skillsObserver.observe(skillsSection);
   }
 
   // ==========================================================================
-  // 8. Contact Form Validator and Handler
+  // 9. Contact Form Validator and Handler
   // ==========================================================================
   if (contactForm) {
     const validateEmail = (email) => {
@@ -459,26 +492,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailInput = document.getElementById('form-email');
       const messageInput = document.getElementById('form-message');
       
-      // Name validation
       if (!nameInput.value.trim()) {
         nameInput.closest('.input-container').classList.add('error');
         isValid = false;
       }
       
-      // Email validation
       if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
         emailInput.closest('.input-container').classList.add('error');
         isValid = false;
       }
       
-      // Message validation
       if (!messageInput.value.trim()) {
         messageInput.closest('.input-container').classList.add('error');
         isValid = false;
       }
       
       if (isValid) {
-        // Trigger simulated submission loading state
         submitBtn.disabled = true;
         submitBtnText.classList.add('hidden');
         submitSpinner.classList.remove('hidden');
@@ -486,7 +515,6 @@ document.addEventListener('DOMContentLoaded', () => {
         errorAlert.classList.add('hidden');
         
         setTimeout(() => {
-          // Success Response
           submitBtn.disabled = false;
           submitBtnText.classList.remove('hidden');
           submitSpinner.classList.add('hidden');
@@ -494,10 +522,8 @@ document.addEventListener('DOMContentLoaded', () => {
           successAlert.classList.remove('hidden');
           contactForm.reset();
           
-          // Scroll up inside form slightly to read the message
           successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           
-          // Fade alert after 8 seconds
           setTimeout(() => {
             successAlert.classList.add('hidden');
           }, 8000);
@@ -512,7 +538,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Reset error boundary styling on manual typing adjustment
     contactForm.querySelectorAll('input, textarea').forEach(field => {
       field.addEventListener('input', () => {
         field.closest('.input-container').classList.remove('error');
@@ -521,7 +546,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 9. Interactive Projects Mock Demo Modal Trigger
+  // 10. Interactive Projects Mock Demo Modal Trigger
   // ==========================================================================
   const toggleModal = (modal, forceHide = false) => {
     if (forceHide) {
@@ -532,7 +557,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const isHidden = modal.classList.toggle('hidden');
     if (!isHidden) {
-      body.style.overflow = 'hidden'; // Stop background scrolling
+      body.style.overflow = 'hidden';
     } else {
       body.style.overflow = '';
     }
@@ -555,7 +580,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Modal keyboard listeners
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !demoModal.classList.contains('hidden')) {
       toggleModal(demoModal, true);

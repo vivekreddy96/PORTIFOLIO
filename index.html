@@ -102,60 +102,85 @@
           </div>
         </div>
         
-        <!-- Hero Right Graphic -->
-        <div class="hero-graphic-container">
+        <!-- Cyberpunk Systems Dashboard Card -->
+        <div class="hero-dashboard-container">
           <div class="hero-img-backdrop"></div>
-          <div class="hero-card-glass">
-            <!-- Sleek SVG avatar with programming circuits -->
-            <svg class="avatar-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="avatar-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#7000ff" />
-                  <stop offset="100%" stop-color="#00f2fe" />
-                </linearGradient>
-                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feGaussianBlur stdDeviation="8" result="blur" />
-                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                </filter>
-              </defs>
-              <!-- Outer glowing ring -->
-              <circle cx="100" cy="100" r="85" fill="none" stroke="url(#avatar-grad)" stroke-width="2.5" filter="url(#glow)" stroke-dasharray="8 8 20 8 45 10"/>
-              <circle cx="100" cy="100" r="76" fill="#0f0f1b" stroke="#1d1b38" stroke-width="1.5" />
-              <!-- Tech Circuits grid -->
-              <path d="M 50,100 L 70,100 L 80,85 L 110,85 L 120,100 L 150,100" fill="none" stroke="#2c2a55" stroke-width="1" />
-              <path d="M 60,120 L 80,120 L 90,105 L 120,105 L 130,120 L 140,120" fill="none" stroke="#2c2a55" stroke-width="1" />
-              <!-- Virtual Avatar representation -->
-              <!-- Shirt/Collar -->
-              <path d="M 60,165 C 60,140 80,135 100,135 C 120,135 140,140 140,165 Z" fill="url(#avatar-grad)" opacity="0.85"/>
-              <path d="M 100,135 L 90,145 L 85,135 Z" fill="#0f0f1b" opacity="0.3" />
-              <path d="M 100,135 L 110,145 L 115,135 Z" fill="#0f0f1b" opacity="0.3" />
-              <!-- Head -->
-              <circle cx="100" cy="95" r="30" fill="#f8cfb3" />
-              <!-- Hair -->
-              <path d="M 70,90 C 70,60 85,55 100,55 C 115,55 130,60 130,90 C 130,90 120,70 100,70 C 80,70 70,90 70,90 Z" fill="#2d2218" />
-              <!-- Glasses -->
-              <rect x="78" y="87" width="18" height="12" rx="3" fill="none" stroke="#00f2fe" stroke-width="2" />
-              <rect x="104" y="87" width="18" height="12" rx="3" fill="none" stroke="#00f2fe" stroke-width="2" />
-              <line x1="96" y1="93" x2="104" y2="93" stroke="#00f2fe" stroke-width="2" />
-              <!-- Glowing VR glasses HUD details -->
-              <circle cx="87" cy="93" r="2" fill="#00f2fe" />
-              <circle cx="113" cy="93" r="2" fill="#00f2fe" />
-              <!-- Tech nodes -->
-              <circle cx="50" cy="100" r="4" fill="#00f2fe" filter="url(#glow)"/>
-              <circle cx="150" cy="100" r="4" fill="#7000ff" filter="url(#glow)"/>
-              <circle cx="90" cy="105" r="3" fill="#00f2fe"/>
-              <circle cx="110" cy="85" r="3" fill="#7000ff"/>
-            </svg>
-            <div class="card-glass-stats">
-              <div class="card-glass-stat">
-                <span class="stat-number">JAVA</span>
-                <span class="stat-lbl">Primary Lang</span>
+          <div class="terminal-window glass-card">
+            <!-- Terminal Header -->
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="term-dot term-dot-red"></span>
+                <span class="term-dot term-dot-yellow"></span>
+                <span class="term-dot term-dot-green"></span>
               </div>
-              <div class="card-glass-separator"></div>
-              <div class="card-glass-stat">
-                <span class="stat-number">DSA</span>
-                <span class="stat-lbl">Focus Area</span>
+              <div class="terminal-title">vivek@vr-systems: ~</div>
+              <div class="terminal-status"><span class="pulse-dot"></span> ONLINE</div>
+            </div>
+            
+            <!-- Terminal Body -->
+            <div class="terminal-body font-mono">
+              <div class="terminal-line">
+                <span class="term-prompt">guest@vr-systems:~$</span> <span class="term-cmd">whoami</span>
               </div>
+              <div class="terminal-output text-glow-cyan">O. Vivek Reddy</div>
+              
+              <div class="terminal-line mt-2">
+                <span class="term-prompt">guest@vr-systems:~$</span> <span class="term-cmd">cat academic_status.json</span>
+              </div>
+              <div class="terminal-output text-glow-purple">
+                {
+                  "university": "Anurag University",
+                  "major": "Information Technology",
+                  "duration": "2024 - Present",
+                  "gpa": "Active_Outstanding"
+                }
+              </div>
+              
+              <div class="terminal-line mt-2">
+                <span class="term-prompt">guest@vr-systems:~$</span> <span class="term-cmd">fetch --skills</span>
+              </div>
+              <div class="terminal-output text-glow-teal">
+                [Java, DSA, HTML/CSS/JS, OOP, DBMS]
+              </div>
+              
+              <div class="terminal-line mt-2">
+                <span class="term-prompt">guest@vr-systems:~$</span> <span class="term-cmd">sys_status</span>
+              </div>
+              <div class="terminal-status-block">
+                <div class="status-indicator">
+                  <span class="status-label">CPU:</span>
+                  <div class="status-bar-container"><div class="status-bar-fill bg-teal" style="width: 78%"></div></div>
+                  <span class="status-value">78%</span>
+                </div>
+                <div class="status-indicator">
+                  <span class="status-label">MEM:</span>
+                  <div class="status-bar-container"><div class="status-bar-fill bg-purple" style="width: 64%"></div></div>
+                  <span class="status-value">64%</span>
+                </div>
+              </div>
+              
+              <div class="terminal-line-active mt-3">
+                <span class="session-active-glow">// SESSION_SECURE // PORT_8080_ACTIVE_</span>
+              </div>
+            </div>
+            
+            <!-- Technical Graphic Dashboard Footer -->
+            <div class="terminal-footer">
+              <svg class="tech-grid-svg" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+                <!-- Glowing digital grid matrix nodes -->
+                <line x1="0" y1="20" x2="200" y2="20" stroke="rgba(0, 242, 254, 0.2)" stroke-width="0.5" />
+                <path d="M 0,20 Q 25,5 50,20 T 100,20 T 150,20 T 200,20" fill="none" stroke="url(#dash-grad)" stroke-width="1.2" />
+                <circle cx="50" cy="20" r="2.5" fill="#00f2fe" />
+                <circle cx="100" cy="20" r="2.5" fill="#7c3aed" />
+                <circle cx="150" cy="20" r="2.5" fill="#00f2fe" />
+                <defs>
+                  <linearGradient id="dash-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#7c3aed" />
+                    <stop offset="50%" stop-color="#00f2fe" />
+                    <stop offset="100%" stop-color="#7c3aed" />
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
           </div>
         </div>
@@ -802,6 +827,6 @@
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

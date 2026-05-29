@@ -3,66 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O. Vivek Reddy | Portfolio | IT Student & Software Developer</title>
+  <title>O. Vivek Reddy | Personal Portfolio</title>
   
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Portfolio of O. Vivek Reddy, an Information Technology student at Anurag University specializing in Java, Web Development, Data Structures, and Database Management. Explore projects and skills.">
-  <meta name="keywords" content="O. Vivek Reddy, Vivek Reddy, Anurag University, Java Developer, Web Developer, Hyderabad IT Student, Data Structures and Algorithms, Portfolio">
+  <!-- SEO Metadata -->
+  <meta name="description" content="Personal portfolio of O. Vivek Reddy, an IT student at Anurag University, specializing in Java development and responsive web design. Check out my projects and skills.">
+  <meta name="keywords" content="Vivek Reddy, O. Vivek Reddy, Anurag University, Java Developer, Web Developer, IT Student, Hyderabad, Portfolio">
   <meta name="author" content="O. Vivek Reddy">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%237000ff%22>VR</text></svg>">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-  <!-- Main Stylesheet -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-theme">
   
-  <!-- Interactive Canvas Particles -->
-  <canvas id="particles-canvas"></canvas>
-  
-  <!-- Background Glow FX -->
-  <div class="blob-container">
-    <div class="blob blob-purple"></div>
-    <div class="blob blob-teal"></div>
-  </div>
-
-  <!-- Custom Custom Scroll Indicator -->
+  <!-- Top Scroll Indicator -->
   <div id="scroll-progress"></div>
 
-  <!-- Header & Navigation -->
+  <!-- Navigation Bar -->
   <header id="header" class="header">
     <div class="container nav-container">
-      <a href="#home" class="logo" id="logo-nav">
-        <span class="logo-accent">&lt;</span>VR<span class="logo-accent"> /&gt;</span>
+      <a href="#home" class="logo">
+        <span class="logo-bold">Vivek</span><span class="logo-light">Reddy</span>
       </a>
       
-      <!-- Desktop Navigation Menu -->
+      <!-- Navigation Links -->
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
           <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
           <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
           <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
           <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- Action Group (Theme + Mobile Hamburger) -->
+      <!-- Utility Actions -->
       <div class="nav-actions">
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle between dark and light mode">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme">
           <i class="fa-solid fa-moon"></i>
         </button>
-        <a href="#contact" class="btn btn-outline nav-btn">Let's Connect</a>
-        <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Open mobile menu" aria-expanded="false">
+        <!-- Placeholders link to mock resume file -->
+        <a href="#" class="btn btn-resume" id="resume-download-nav" download>
+          <i class="fa-solid fa-download"></i> Resume
+        </a>
+        <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Open navigation menu" aria-expanded="false">
           <span class="bar bar-1"></span>
           <span class="bar bar-2"></span>
           <span class="bar bar-3"></span>
@@ -71,116 +63,49 @@
     </div>
   </header>
 
-  <!-- Main Content Wrapper -->
+  <!-- Main Sections -->
   <main>
     
     <!-- Hero / Home Section -->
     <section id="home" class="hero-section">
-      <div class="container hero-container grid-2">
+      <div class="container hero-container">
         <div class="hero-content">
-          <div class="badge-new">
-            <span class="pulse-dot"></span> Open to Internships & Collaboration
-          </div>
-          <h1 class="hero-title">
-            Hi, I'm <span class="name-gradient">O. Vivek Reddy</span>
-          </h1>
-          <h2 class="hero-subtitle">
-            I am a <span class="typewriter-text" id="typewriter" data-words='["IT Student", "Java Developer", "Web Enthusiast", "Problem Solver"]'></span><span class="cursor">|</span>
-          </h2>
-          <p class="hero-description text-muted">
-            Information Technology student at Anurag University. Passionate about solving complex problems using core computer science fundamentals, building robust applications in Java, and designing modern, interactive web experiences.
+          <span class="hero-greeting">Hi, I'm</span>
+          <h1 class="hero-title">O. Vivek Reddy</h1>
+          <h2 class="hero-subtitle">Java Developer | Web Developer | IT Student</h2>
+          <p class="hero-description">
+            I am a student currently pursuing my **B.Tech in Information Technology** at **Anurag University**. I enjoy writing structured code in Java, practicing problem-solving logic through Data Structures, and building responsive, user-friendly websites.
           </p>
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-laptop-code"></i> View My Work</a>
-            <a href="#contact" class="btn btn-secondary"><i class="fa-regular fa-envelope"></i> Let's Talk</a>
+            <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-down"></i></a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
           </div>
           <div class="hero-socials">
-            <span class="social-label">Find me on:</span>
-            <a href="https://www.linkedin.com/in/vivek-reddy-285932323" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="mailto:vr2243820@gmail.com" class="social-icon-link" aria-label="Email Me"><i class="fa-solid fa-envelope"></i></a>
-            <a href="tel:+918121173708" class="social-icon-link" aria-label="Call Me"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://github.com/vivekreddy96" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/vivek-reddy-285932323" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:vr2243820@gmail.com" aria-label="Send Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:+918121173708" aria-label="Call Me"><i class="fa-solid fa-phone"></i></a>
           </div>
         </div>
         
-        <!-- Cyberpunk Systems Dashboard Card -->
-        <div class="hero-dashboard-container">
-          <div class="hero-img-backdrop"></div>
-          <div class="terminal-window glass-card">
-            <!-- Terminal Header -->
-            <div class="terminal-header">
-              <div class="terminal-dots">
-                <span class="term-dot term-dot-red"></span>
-                <span class="term-dot term-dot-yellow"></span>
-                <span class="term-dot term-dot-green"></span>
-              </div>
-              <div class="terminal-title">vivek@vr-systems: ~</div>
-              <div class="terminal-status"><span class="pulse-dot"></span> ONLINE</div>
+        <!-- Hero Graphic Concept -->
+        <div class="hero-visual">
+          <div class="visual-circle"></div>
+          <div class="visual-card">
+            <div class="visual-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
             </div>
-            
-            <!-- Terminal Body -->
-            <div class="terminal-body font-mono">
-              <div class="terminal-line">
-                <span class="term-prompt">guest@vr-systems:~$</span> <span class="term-cmd">whoami</span>
-              </div>
-              <div class="terminal-output text-glow-cyan">O. Vivek Reddy</div>
-              
-              <div class="terminal-line mt-2">
-                <span class="term-prompt">guest@vr-systems:~$</span> <span class="term-cmd">cat academic_status.json</span>
-              </div>
-              <div class="terminal-output text-glow-purple">
-                {
-                  "university": "Anurag University",
-                  "major": "Information Technology",
-                  "duration": "2024 - Present",
-                  "gpa": "Active_Outstanding"
-                }
-              </div>
-              
-              <div class="terminal-line mt-2">
-                <span class="term-prompt">guest@vr-systems:~$</span> <span class="term-cmd">fetch --skills</span>
-              </div>
-              <div class="terminal-output text-glow-teal">
-                [Java, DSA, HTML/CSS/JS, OOP, DBMS]
-              </div>
-              
-              <div class="terminal-line mt-2">
-                <span class="term-prompt">guest@vr-systems:~$</span> <span class="term-cmd">sys_status</span>
-              </div>
-              <div class="terminal-status-block">
-                <div class="status-indicator">
-                  <span class="status-label">CPU:</span>
-                  <div class="status-bar-container"><div class="status-bar-fill bg-teal" style="width: 78%"></div></div>
-                  <span class="status-value">78%</span>
-                </div>
-                <div class="status-indicator">
-                  <span class="status-label">MEM:</span>
-                  <div class="status-bar-container"><div class="status-bar-fill bg-purple" style="width: 64%"></div></div>
-                  <span class="status-value">64%</span>
-                </div>
-              </div>
-              
-              <div class="terminal-line-active mt-3">
-                <span class="session-active-glow">// SESSION_SECURE // PORT_8080_ACTIVE_</span>
-              </div>
-            </div>
-            
-            <!-- Technical Graphic Dashboard Footer -->
-            <div class="terminal-footer">
-              <svg class="tech-grid-svg" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-                <!-- Glowing digital grid matrix nodes -->
-                <line x1="0" y1="20" x2="200" y2="20" stroke="rgba(0, 242, 254, 0.2)" stroke-width="0.5" />
-                <path d="M 0,20 Q 25,5 50,20 T 100,20 T 150,20 T 200,20" fill="none" stroke="url(#dash-grad)" stroke-width="1.2" />
-                <circle cx="50" cy="20" r="2.5" fill="#00f2fe" />
-                <circle cx="100" cy="20" r="2.5" fill="#7c3aed" />
-                <circle cx="150" cy="20" r="2.5" fill="#00f2fe" />
-                <defs>
-                  <linearGradient id="dash-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#7c3aed" />
-                    <stop offset="50%" stop-color="#00f2fe" />
-                    <stop offset="100%" stop-color="#7c3aed" />
-                  </linearGradient>
-                </defs>
-              </svg>
+            <div class="visual-code">
+              <p><span class="keyword">public class</span> <span class="class-name">Developer</span> {</p>
+              <p class="indent-1"><span class="keyword">private String</span> name = <span class="string">"Vivek Reddy"</span>;</p>
+              <p class="indent-1"><span class="keyword">private String</span> college = <span class="string">"Anurag University"</span>;</p>
+              <p class="indent-1"><span class="keyword">private String[]</span> skills = {<span class="string">"Java"</span>, <span class="string">"HTML/CSS/JS"</span>, <span class="string">"SQL"</span>};</p>
+              <p class="indent-1"><span class="keyword">public void</span> <span class="method-name">code</span>() {</p>
+              <p class="indent-2"><span class="class-name">System</span>.out.println(<span class="string">"Building software..."</span>);</p>
+              <p class="indent-1">}</p>
+              <p>}</p>
             </div>
           </div>
         </div>
@@ -190,101 +115,64 @@
     <!-- About Me Section -->
     <section id="about" class="about-section section-padding">
       <div class="container">
-        <div class="section-title-wrapper reveal">
+        <div class="section-header">
           <span class="section-subtitle">Get to Know Me</span>
           <h2 class="section-title">About Me</h2>
-          <div class="title-underline"></div>
+          <div class="section-underline"></div>
         </div>
 
-        <div class="grid-2 gap-4">
-          <!-- About Description & Timeline -->
-          <div class="about-info-column reveal">
-            <h3 class="about-heading">My Journey as a Developer</h3>
-            <p class="about-paragraph">
-              I am currently pursuing a **B.Tech in Information Technology** at **Anurag University** (2024 - Present). From the moment I wrote my first lines of code, I became fascinated by how technology can be used to translate logic into functional digital solutions.
+        <div class="about-grid">
+          <div class="about-info">
+            <h3>My Programming Path</h3>
+            <p>
+              I am an Information Technology student at **Anurag University** (2024 - Present) with a strong passion for programming. My journey started with learning the fundamentals of computer science and logic formulation, which quickly led me to adopt **Java** as my primary language of choice.
             </p>
-            <p class="about-paragraph">
-              My core academic journey revolves around strengthening standard software principles. I am heavily focused on mastering **Data Structures and Algorithms (DSA)** to sharpen my analytical reasoning and problem-solving velocity. Simultaneously, I love bringing ideas to life using web development, constructing modern visual layouts integrated with efficient back-end schemas.
+            <p>
+              I spend my time practicing **Data Structures and Algorithms (DSA)** to sharpen my problem-solving skills and mathematical thinking. In addition, I enjoy developing websites using frontend technologies like **HTML, CSS, and JavaScript**. I believe in writing readable, commented code that is easy to maintain.
+            </p>
+            <p>
+              When I'm not studying or writing code, I enjoy watching movies, listening to music, and exploring new tech trends. I consider myself a quick learner and am always looking for opportunities to build practical tools.
             </p>
             
-            <div class="about-details-grid">
+            <!-- Timeline elements inside Info -->
+            <div class="about-details">
               <div class="detail-item">
-                <span class="detail-label"><i class="fa-solid fa-graduation-cap text-accent"></i> Education:</span>
-                <span class="detail-value">B.Tech in IT (2024 - Present)</span>
+                <span class="detail-label"><i class="fa-solid fa-graduation-cap"></i> College</span>
+                <span class="detail-val">Anurag University (B.Tech in IT)</span>
               </div>
               <div class="detail-item">
-                <span class="detail-label"><i class="fa-solid fa-university text-accent"></i> University:</span>
-                <span class="detail-value">Anurag University, Hyderabad</span>
+                <span class="detail-label"><i class="fa-solid fa-map-pin"></i> Location</span>
+                <span class="detail-val">Hyderabad, Telangana, India</span>
               </div>
               <div class="detail-item">
-                <span class="detail-label"><i class="fa-solid fa-location-dot text-accent"></i> Location:</span>
-                <span class="detail-value">Hyderabad, Telangana, India</span>
+                <span class="detail-label"><i class="fa-solid fa-envelope"></i> Email</span>
+                <span class="detail-val">vr2243820@gmail.com</span>
               </div>
               <div class="detail-item">
-                <span class="detail-label"><i class="fa-solid fa-language text-accent"></i> Language:</span>
-                <span class="detail-value">English, Telugu, Hindi</span>
+                <span class="detail-label"><i class="fa-solid fa-phone"></i> Phone</span>
+                <span class="detail-val">+91 8121173708</span>
               </div>
             </div>
           </div>
 
-          <!-- Cards with Stats & Hobbies -->
-          <div class="about-cards-column grid-2 gap-2 reveal">
-            <!-- Card 1: Problem Solver Mindset -->
-            <div class="about-card glass-card">
-              <div class="card-icon-container">
-                <i class="fa-solid fa-brain"></i>
-              </div>
-              <h4>Mindset</h4>
-              <p>Strong problem-solving capacity, quick learning adaptability, and a highly analytical outlook toward debugging challenges.</p>
+          <!-- Handcrafted design metrics cards -->
+          <div class="about-cards">
+            <div class="metric-card">
+              <div class="metric-icon"><i class="fa-solid fa-code"></i></div>
+              <h4>Developer Mindset</h4>
+              <p>Strong problem-solving capability, adaptability, and logical structuring of code solutions.</p>
             </div>
             
-            <!-- Card 2: Academic Focus -->
-            <div class="about-card glass-card">
-              <div class="card-icon-container">
-                <i class="fa-solid fa-code"></i>
-              </div>
-              <h4>DSA Practice</h4>
-              <p>Actively practicing Data Structures and Algorithms to continuously boost efficiency and prepare for key software opportunities.</p>
+            <div class="metric-card">
+              <div class="metric-icon"><i class="fa-solid fa-brain"></i></div>
+              <h4>DSA & OOP</h4>
+              <p>Actively learning and practicing algorithms, data structures, and object-oriented paradigms in Java.</p>
             </div>
-
-            <!-- Card 3: Hobbies & Interests -->
-            <div class="about-card glass-card col-span-2">
-              <div class="card-icon-container">
-                <i class="fa-solid fa-heart"></i>
-              </div>
-              <h4>Hobbies & Interests</h4>
-              <div class="hobbies-tags">
-                <span class="hobby-tag"><i class="fa-solid fa-film"></i> Watching Movies</span>
-                <span class="hobby-tag"><i class="fa-solid fa-music"></i> Listening to Music</span>
-                <span class="hobby-tag"><i class="fa-solid fa-rocket"></i> Exploring New Tech</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Academic Timeline Section -->
-        <div class="timeline-container reveal section-padding-sm">
-          <h3 class="timeline-title text-center"><i class="fa-solid fa-clock-rotate-left"></i> Timeline</h3>
-          <div class="timeline">
-            <!-- Timeline Item 1 -->
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-date">2024 - Present</div>
-              <div class="timeline-content glass-card">
-                <h4>B.Tech in Information Technology</h4>
-                <h5>Anurag University</h5>
-                <p>Acquiring fundamental knowledge in software, including Object-Oriented Programming, Database Management Systems, and advanced technical paradigms, while maintaining high academic performance.</p>
-              </div>
-            </div>
-            <!-- Timeline Item 2 -->
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-date">2024 - Present</div>
-              <div class="timeline-content glass-card">
-                <h4>Personal Project Acceleration</h4>
-                <h5>Full Stack & Game Architecture</h5>
-                <p>Built responsive, interactive platforms utilizing JavaScript, HTML5/CSS3, and Core Java. Integrated MySQL schemas with back-end workflows to ensure high data integrity.</p>
-              </div>
+            
+            <div class="metric-card col-span-2-desktop">
+              <div class="metric-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+              <h4>Academic Context</h4>
+              <p>Developing operational understanding of Database Management Systems (DBMS), SQL queries, and software engineering cycles at Anurag University.</p>
             </div>
           </div>
         </div>
@@ -294,136 +182,62 @@
     <!-- Skills Section -->
     <section id="skills" class="skills-section section-padding section-bg-alt">
       <div class="container">
-        <div class="section-title-wrapper reveal">
-          <span class="section-subtitle">What I Bring to the Table</span>
+        <div class="section-header">
+          <span class="section-subtitle">My Toolbox</span>
           <h2 class="section-title">Technical Skills</h2>
-          <div class="title-underline"></div>
+          <div class="section-underline"></div>
         </div>
 
-        <div class="skills-grid reveal">
-          <!-- Languages Skill Card -->
-          <div class="skills-card glass-card">
-            <div class="skills-card-header">
-              <i class="fa-solid fa-code-branch"></i>
-              <h3>Programming Languages</h3>
+        <div class="skills-grid">
+          <!-- Skill Category 1 -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <i class="fa-brands fa-java text-java"></i>
+              <h3>Programming</h3>
             </div>
-            <div class="skills-list">
-              <div class="skill-item-progress">
-                <div class="skill-info">
-                  <span class="skill-name"><i class="fa-brands fa-java text-java"></i> Java (Core & OOP)</span>
-                  <span class="skill-percentage">85%</span>
-                </div>
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-fill" style="width: 85%"></div>
-                </div>
-              </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Java (OOP, Core)</span>
+              <span class="skill-tag">Data Structures</span>
+              <span class="skill-tag">Algorithms</span>
             </div>
           </div>
 
-          <!-- Web Technologies Skill Card -->
-          <div class="skills-card glass-card">
-            <div class="skills-card-header">
-              <i class="fa-solid fa-laptop-code"></i>
+          <!-- Skill Category 2 -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <i class="fa-solid fa-laptop-code text-web"></i>
               <h3>Web Development</h3>
             </div>
-            <div class="skills-list">
-              <div class="skill-item-progress">
-                <div class="skill-info">
-                  <span class="skill-name"><i class="fa-brands fa-html5 text-html"></i> HTML5</span>
-                  <span class="skill-percentage">90%</span>
-                </div>
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-fill" style="width: 90%"></div>
-                </div>
-              </div>
-              
-              <div class="skill-item-progress">
-                <div class="skill-info">
-                  <span class="skill-name"><i class="fa-brands fa-css3-alt text-css"></i> CSS3 (Flexbox/Grid)</span>
-                  <span class="skill-percentage">85%</span>
-                </div>
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-fill" style="width: 85%"></div>
-                </div>
-              </div>
-
-              <div class="skill-item-progress">
-                <div class="skill-info">
-                  <span class="skill-name"><i class="fa-brands fa-js-square text-js"></i> JavaScript (ES6+)</span>
-                  <span class="skill-percentage">80%</span>
-                </div>
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-fill" style="width: 80%"></div>
-                </div>
-              </div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3 (Grid/Flexbox)</span>
+              <span class="skill-tag">JavaScript (ES6+)</span>
             </div>
           </div>
 
-          <!-- Core CS Skill Card -->
-          <div class="skills-card glass-card">
-            <div class="skills-card-header">
-              <i class="fa-solid fa-gears"></i>
-              <h3>Core Fundamentals</h3>
+          <!-- Skill Category 3 -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <i class="fa-solid fa-database text-sql"></i>
+              <h3>Databases</h3>
             </div>
-            <div class="skills-list">
-              <div class="skill-item-progress">
-                <div class="skill-info">
-                  <span class="skill-name"><i class="fa-solid fa-sitemap"></i> Data Structures & Algorithms</span>
-                  <span class="skill-percentage">80%</span>
-                </div>
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-fill" style="width: 80%"></div>
-                </div>
-              </div>
-
-              <div class="skill-item-progress">
-                <div class="skill-info">
-                  <span class="skill-name"><i class="fa-solid fa-shapes"></i> Object-Oriented Programming (OOP)</span>
-                  <span class="skill-percentage">85%</span>
-                </div>
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-fill" style="width: 85%"></div>
-                </div>
-              </div>
-
-              <div class="skill-item-progress">
-                <div class="skill-info">
-                  <span class="skill-name"><i class="fa-solid fa-database"></i> DBMS & Relational SQL</span>
-                  <span class="skill-percentage">75%</span>
-                </div>
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-fill" style="width: 75%"></div>
-                </div>
-              </div>
+            <div class="skill-tags">
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">DBMS Concepts</span>
+              <span class="skill-tag">Data Relations</span>
             </div>
           </div>
 
-          <!-- Tools Skill Card -->
-          <div class="skills-card glass-card">
-            <div class="skills-card-header">
-              <i class="fa-solid fa-toolbox"></i>
+          <!-- Skill Category 4 -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <i class="fa-solid fa-toolbox text-tools"></i>
               <h3>Developer Tools</h3>
             </div>
-            <div class="skills-list">
-              <div class="skill-item-progress">
-                <div class="skill-info">
-                  <span class="skill-name"><i class="fa-brands fa-git-alt text-git"></i> Git & GitHub</span>
-                  <span class="skill-percentage">80%</span>
-                </div>
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-fill" style="width: 80%"></div>
-                </div>
-              </div>
-
-              <div class="skill-item-progress">
-                <div class="skill-info">
-                  <span class="skill-name"><i class="fa-solid fa-square-envelope text-vscode"></i> VS Code</span>
-                  <span class="skill-percentage">90%</span>
-                </div>
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-fill" style="width: 90%"></div>
-                </div>
-              </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">VS Code</span>
             </div>
           </div>
         </div>
@@ -433,185 +247,181 @@
     <!-- Projects Section -->
     <section id="projects" class="projects-section section-padding">
       <div class="container">
-        <div class="section-title-wrapper reveal">
-          <span class="section-subtitle">My Recent Work</span>
+        <div class="section-header">
+          <span class="section-subtitle">What I've Built</span>
           <h2 class="section-title">Projects</h2>
-          <div class="title-underline"></div>
-        </div>
-
-        <!-- Filter Navigation Links -->
-        <div class="projects-filter-nav reveal">
-          <button class="filter-btn active" data-filter="all">All Projects</button>
-          <button class="filter-btn" data-filter="web">Web Development</button>
-          <button class="filter-btn" data-filter="systems">Systems & Management</button>
+          <div class="section-underline"></div>
         </div>
 
         <!-- Projects Grid -->
-        <div class="projects-grid reveal">
-          <!-- Project 1: Responsive Landing Page -->
-          <div class="project-card glass-card" data-category="web">
-            <div class="project-header">
-              <!-- Inline custom SVG graphic representing responsive devices mockup -->
-              <svg class="project-mockup-svg" viewBox="0 0 120 75" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="glow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#00f2fe" />
-                    <stop offset="100%" stop-color="#7000ff" />
-                  </linearGradient>
-                </defs>
-                <!-- Laptop Base -->
-                <rect x="25" y="15" width="70" height="42" rx="3" fill="#1e1b4b" stroke="#2e2a75" stroke-width="1.2"/>
-                <rect x="28" y="18" width="64" height="34" rx="1" fill="#09090e" />
-                <!-- Screen Contents -->
-                <rect x="32" y="22" width="56" height="12" rx="1.5" fill="url(#glow-grad)" opacity="0.8"/>
-                <rect x="32" y="38" width="16" height="10" rx="1" fill="#201c3d" />
-                <rect x="52" y="38" width="16" height="10" rx="1" fill="#201c3d" />
-                <rect x="72" y="38" width="16" height="10" rx="1" fill="#201c3d" />
-                <!-- Laptop Base Keyboard Part -->
-                <rect x="15" y="56" width="90" height="4" rx="2" fill="#2e2a75" />
-                <rect x="50" y="56" width="20" height="1.5" rx="0.5" fill="#474395" />
-                <!-- Responsive Phone overlay -->
-                <rect x="85" y="32" width="15" height="28" rx="2.5" fill="#0f172a" stroke="#00f2fe" stroke-width="1" />
-                <rect x="86.5" y="34" width="12" height="24" rx="1.5" fill="#020617" />
-                <rect x="89" y="37" width="7" height="3" rx="0.5" fill="#00f2fe" opacity="0.6"/>
-                <rect x="89" y="42" width="7" height="2" rx="0.3" fill="#334155" />
-                <rect x="89" y="46" width="7" height="2" rx="0.3" fill="#334155" />
-                <rect x="89" y="50" width="7" height="2" rx="0.3" fill="#334155" />
+        <div class="projects-grid">
+          
+          <!-- Project 1: Personal Portfolio Website -->
+          <div class="project-card">
+            <div class="project-preview">
+              <!-- Inline Custom SVGs representing realistic mockup layout -->
+              <svg viewBox="0 0 100 65" class="project-svg" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="65" rx="3" fill="#1e293b" />
+                <rect width="100" height="8" fill="#0f172a" />
+                <circle cx="4" cy="4" r="1.5" fill="#ff5f56" />
+                <circle cx="8" cy="4" r="1.5" fill="#ffbd2e" />
+                <circle cx="12" cy="4" r="1.5" fill="#27c93f" />
+                <!-- Page contents layout -->
+                <rect x="5" y="14" width="20" height="3" rx="0.5" fill="#3b82f6" />
+                <rect x="75" y="14" width="20" height="3" rx="0.5" fill="#64748b" />
+                <!-- Hero layout -->
+                <circle cx="50" cy="34" r="8" fill="#475569" />
+                <rect x="30" y="46" width="40" height="3" rx="0.5" fill="#ffffff" />
+                <rect x="35" y="52" width="30" height="2" rx="0.5" fill="#64748b" />
               </svg>
             </div>
-            
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="project-tag">HTML5</span>
-                <span class="project-tag">CSS3</span>
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">UI/UX</span>
-                <span class="project-tag">Responsive</span>
-              </div>
-              <h3 class="project-title">Responsive Landing Page</h3>
-              <p class="project-description text-muted">
-                Developed a modern and fully responsive landing page using HTML, CSS, and JavaScript with a premium user interface and smooth animations. The project includes responsive layouts, interactive sections, hover effects, and glassmorphism design elements. Optimized the website for desktop, tablet, and mobile devices to ensure seamless performance across all screen sizes.
+            <div class="project-details">
+              <span class="project-number">01</span>
+              <h3>Personal Portfolio Website</h3>
+              <p>
+                My custom-built portfolio website showing my technical bio, skill tags, college information, and contact details. Designed with clean semantic HTML5, CSS Grid spacing layouts, and vanilla JavaScript theme handlers.
               </p>
+              <div class="project-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Vite</span>
+              </div>
               <div class="project-links">
-                <a href="https://github.com/vivekreddy96/Responsive-Landing-Page.git" target="_blank" rel="noopener noreferrer" class="btn-project" aria-label="View Source Code on GitHub"><i class="fa-brands fa-github"></i> Code</a>
-                <a href="#" class="btn-project demo-trigger" aria-label="View Live Project Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                <a href="https://github.com/vivekreddy96/PORTIFOLIO.git" target="_blank" rel="noopener noreferrer" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" class="proj-link demo-trigger"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
               </div>
             </div>
           </div>
 
-          <!-- Project 2: BDA Management System -->
-          <div class="project-card glass-card" data-category="systems">
-            <div class="project-header">
-              <!-- Inline custom SVG graphic representing workflow dashboards -->
-              <svg class="project-mockup-svg" viewBox="0 0 120 75" xmlns="http://www.w3.org/2000/svg">
-                <rect width="120" height="75" rx="4" fill="#0f0e21" stroke="#252148" stroke-width="1.5"/>
-                <!-- Top bar -->
-                <rect width="120" height="10" rx="1" fill="#171533"/>
-                <circle cx="6" cy="5" r="2" fill="#ff5f56"/>
-                <circle cx="12" cy="5" r="2" fill="#ffbd2e"/>
-                <circle cx="18" cy="5" r="2" fill="#27c93f"/>
-                <!-- Left Side Panel -->
-                <rect x="4" y="14" width="22" height="56" rx="2" fill="#171533" />
-                <rect x="7" y="19" width="16" height="4" rx="1.5" fill="#8b5cf6" />
-                <rect x="7" y="27" width="16" height="3" rx="1" fill="#3a3765" />
-                <rect x="7" y="34" width="16" height="3" rx="1" fill="#3a3765" />
-                <rect x="7" y="41" width="16" height="3" rx="1" fill="#3a3765" />
-                <!-- Main Panel Stats -->
-                <circle cx="48" cy="30" r="12" fill="none" stroke="#252148" stroke-width="4"/>
-                <circle cx="48" cy="30" r="12" fill="none" stroke="#06b6d4" stroke-width="4" stroke-dasharray="55 25" transform="rotate(-90 48 30)"/>
-                <text x="48" y="32" fill="#ffffff" font-size="6" font-family="Outfit" font-weight="bold" text-anchor="middle">70%</text>
-                <!-- Grid/Workflow stats -->
-                <rect x="70" y="18" width="44" height="11" rx="2" fill="#171533" />
-                <rect x="74" y="21" width="22" height="2" rx="0.5" fill="#ffffff" />
-                <rect x="74" y="25" width="36" height="1.5" rx="0.3" fill="#3a3765" />
-                
-                <rect x="70" y="32" width="44" height="11" rx="2" fill="#171533" />
-                <rect x="74" y="35" width="28" height="2" rx="0.5" fill="#ffffff" />
-                <rect x="74" y="39" width="30" height="1.5" rx="0.3" fill="#3a3765" />
-                <!-- Bottom bar graph -->
-                <rect x="30" y="48" width="84" height="22" rx="2" fill="#09090e" stroke="#252148" stroke-width="0.8"/>
-                <rect x="35" y="58" width="6" height="10" rx="1" fill="#8b5cf6" />
-                <rect x="45" y="53" width="6" height="15" rx="1" fill="#06b6d4" />
-                <rect x="55" y="56" width="6" height="12" rx="1" fill="#8b5cf6" />
-                <rect x="65" y="51" width="6" height="17" rx="1" fill="#06b6d4" />
-                <rect x="75" y="55" width="6" height="13" rx="1" fill="#8b5cf6" />
-                <rect x="85" y="52" width="6" height="16" rx="1" fill="#06b6d4" />
-                <rect x="95" y="57" width="6" height="11" rx="1" fill="#8b5cf6" />
-                <rect x="105" y="50" width="6" height="18" rx="1" fill="#27c93f" />
+          <!-- Project 2: Responsive Landing Page -->
+          <div class="project-card">
+            <div class="project-preview">
+              <svg viewBox="0 0 100 65" class="project-svg" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="65" rx="3" fill="#0f172a" />
+                <rect width="100" height="8" fill="#1e293b" />
+                <!-- Banner hero image layout -->
+                <rect x="8" y="14" width="50" height="28" rx="2" fill="#3b82f6" opacity="0.8" />
+                <rect x="64" y="16" width="28" height="4" rx="1" fill="#ffffff" />
+                <rect x="64" y="24" width="28" height="2" rx="0.5" fill="#64748b" />
+                <rect x="64" y="28" width="28" height="2" rx="0.5" fill="#64748b" />
+                <!-- Responsive Grid column blocks -->
+                <rect x="8" y="47" width="25" height="12" rx="1.5" fill="#1e293b" />
+                <rect x="37" y="47" width="25" height="12" rx="1.5" fill="#1e293b" />
+                <rect x="66" y="47" width="25" height="12" rx="1.5" fill="#1e293b" />
               </svg>
             </div>
-            
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="project-tag">HTML5</span>
-                <span class="project-tag">CSS3</span>
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">Workflow</span>
-                <span class="project-tag">Management</span>
-              </div>
-              <h3 class="project-title">BDA Management System</h3>
-              <p class="project-description text-muted">
-                Designed and developed a responsive BDA Management System project for managing and organizing operational workflows efficiently. Implemented a clean and interactive user interface with responsive layouts and modern styling. The project focuses on improving usability, data handling, and user interaction through structured components and optimized design.
+            <div class="project-details">
+              <span class="project-number">02</span>
+              <h3>Responsive Landing Page</h3>
+              <p>
+                A modern responsive landing page website highlighting frontend balance, grid flexbox layouts, and custom hover states. Optimized to load cleanly and adapt layouts fluidly across desktop, mobile, and tablet viewport sizes.
               </p>
+              <div class="project-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Flexbox</span>
+              </div>
               <div class="project-links">
-                <a href="https://github.com/vivekreddy96/BDA-Management.git" target="_blank" rel="noopener noreferrer" class="btn-project" aria-label="View Source Code on GitHub"><i class="fa-brands fa-github"></i> Code</a>
-                <a href="#" class="btn-project demo-trigger" aria-label="View Live Project Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                <a href="https://github.com/vivekreddy96/Responsive-Landing-Page.git" target="_blank" rel="noopener noreferrer" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" class="proj-link demo-trigger"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
               </div>
             </div>
           </div>
 
-          <!-- Project 3: Python Challenge Website -->
-          <div class="project-card glass-card" data-category="web">
-            <div class="project-header">
-              <!-- Inline custom SVG graphic representing IDE text editor window -->
-              <svg class="project-mockup-svg" viewBox="0 0 120 75" xmlns="http://www.w3.org/2000/svg">
-                <rect width="120" height="75" rx="4" fill="#0a0a0f" stroke="#1d1b38" stroke-width="1.5"/>
-                <!-- Top bar -->
-                <rect width="120" height="10" rx="1" fill="#15132d"/>
-                <circle cx="6" cy="5" r="2" fill="#ff5f56"/>
-                <circle cx="12" cy="5" r="2" fill="#ffbd2e"/>
-                <circle cx="18" cy="5" r="2" fill="#27c93f"/>
-                <text x="60" y="7" fill="#8b5cf6" font-size="5" font-family="Outfit" text-anchor="middle" font-weight="bold">python_challenge.py</text>
-                <!-- Python Logo overlay background -->
-                <path d="M 98,28 C 98,23 93,23 91,23 L 83,23 C 80,23 79,25 79,28 L 79,33 L 87,33 C 90,33 91,34 91,37 L 91,42 L 95,42 C 98,42 101,39 101,36 L 101,32 C 101,29 99,28 98,28 Z" fill="#06b6d4" opacity="0.15" />
-                <path d="M 82,47 C 82,52 87,52 89,52 L 97,52 C 100,52 101,50 101,47 L 101,42 L 93,42 C 90,42 89,41 89,38 L 89,33 L 85,33 C 82,33 79,36 79,39 L 79,43 C 79,46 81,47 82,47 Z" fill="#8b5cf6" opacity="0.15" />
-                <!-- Code lines -->
-                <text x="8" y="22" fill="#ff007f" font-size="5.5" font-family="Courier New" font-weight="bold">def</text>
-                <text x="21" y="22" fill="#00f2fe" font-size="5.5" font-family="Courier New">solve_challenge():</text>
-                
-                <text x="16" y="31" fill="#ffffff" font-size="5.5" font-family="Courier New">logic = </text>
-                <text x="44" y="31" fill="#f0db4f" font-size="5.5" font-family="Courier New">"analytical"</text>
-                
-                <text x="16" y="40" fill="#ff007f" font-size="5.5" font-family="Courier New" font-weight="bold">if</text>
-                <text x="26" y="40" fill="#ffffff" font-size="5.5" font-family="Courier New"> user_input == </text>
-                <text x="71" y="40" fill="#27c93f" font-size="5.5" font-family="Courier New">"success"</text>
-                <text x="96" y="40" fill="#ffffff" font-size="5.5" font-family="Courier New">:</text>
-                
-                <text x="24" y="49" fill="#ff007f" font-size="5.5" font-family="Courier New" font-weight="bold">return</text>
-                <text x="46" y="49" fill="#06b6d4" font-size="5.5" font-family="Courier New">"🏆 Score 100!"</text>
-                <!-- Bottom panel -->
-                <rect x="4" y="58" width="112" height="13" rx="2" fill="#131127" stroke="#252148" stroke-width="0.8"/>
-                <text x="10" y="67" fill="#27c93f" font-size="5" font-family="Courier New">&gt;&gt;&gt; Running test cases... All tests passed!</text>
-                <circle cx="110" cy="64.5" r="2.5" fill="#27c93f" />
+          <!-- Project 3: Bank Management System (Java) -->
+          <div class="project-card">
+            <div class="project-preview">
+              <svg viewBox="0 0 100 65" class="project-svg" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="65" rx="3" fill="#020617" />
+                <rect width="100" height="8" fill="#0f172a" />
+                <!-- Terminal Command Line Layout -->
+                <text x="5" y="17" fill="#10b981" font-size="4" font-family="Courier New" font-weight="bold">java BankSystem</text>
+                <text x="5" y="24" fill="#ffffff" font-size="4.5" font-family="Courier New">-- BANK SYSTEM MENU --</text>
+                <text x="5" y="31" fill="#64748b" font-size="3.5" font-family="Courier New">[1] Check Balance</text>
+                <text x="5" y="37" fill="#64748b" font-size="3.5" font-family="Courier New">[2] Deposit Funds</text>
+                <text x="5" y="43" fill="#64748b" font-size="3.5" font-family="Courier New">[3] Withdraw Cash</text>
+                <text x="5" y="49" fill="#64748b" font-size="3.5" font-family="Courier New">[4] Exit</text>
+                <text x="5" y="57" fill="#3b82f6" font-size="4.5" font-family="Courier New">Select option: 1_</text>
               </svg>
             </div>
-            
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="project-tag">Python</span>
-                <span class="project-tag">HTML5/CSS3</span>
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">Interactive</span>
-                <span class="project-tag">Netlify</span>
-              </div>
-              <h3 class="project-title">Python Challenge Website</h3>
-              <p class="project-description text-muted">
-                Created an interactive Python Challenge Website for practicing coding problems and improving logical thinking skills. The platform provides a clean and user-friendly interface with responsive design and smooth navigation. Implemented modern frontend styling and interactive components.
+            <div class="project-details">
+              <span class="project-number">03</span>
+              <h3>Bank Management System</h3>
+              <p>
+                A Java console program simulating core banking behaviors. Manages account creation, secure user authentication, transactional balance updates (deposits & cash withdrawals), and stores records using structured OOP schemas.
               </p>
-              <div class="project-links">
-                <a href="#" class="btn-project demo-trigger" aria-label="View Source Code on GitHub"><i class="fa-brands fa-github"></i> Code</a>
-                <a href="https://vivek-pythonchallange.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-project" aria-label="View Live Project Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <div class="project-tags">
+                <span>Java</span>
+                <span>OOP</span>
+                <span>Console logic</span>
+                <span>Data Flow</span>
               </div>
+              <div class="project-links">
+                <a href="https://github.com/vivekreddy96/BDA-Management.git" target="_blank" rel="noopener noreferrer" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" class="proj-link demo-trigger"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Number Guessing Game (Java) -->
+          <div class="project-card">
+            <div class="project-preview">
+              <svg viewBox="0 0 100 65" class="project-svg" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="65" rx="3" fill="#020617" />
+                <rect width="100" height="8" fill="#0f172a" />
+                <!-- Guessing Game console log -->
+                <text x="5" y="17" fill="#10b981" font-size="4" font-family="Courier New" font-weight="bold">java GuessGame</text>
+                <text x="5" y="24" fill="#ffffff" font-size="4" font-family="Courier New">Guess the number (1-100):</text>
+                <text x="5" y="32" fill="#3b82f6" font-size="4" font-family="Courier New">Enter your guess: 50</text>
+                <text x="5" y="39" fill="#ffbd2e" font-size="4" font-family="Courier New">&gt;&gt; Too high! Try again.</text>
+                <text x="5" y="47" fill="#3b82f6" font-size="4" font-family="Courier New">Enter your guess: 25</text>
+                <text x="5" y="55" fill="#27c93f" font-size="4" font-family="Courier New">&gt;&gt; Correct! Attempts: 2</text>
+              </svg>
+            </div>
+            <div class="project-details">
+              <span class="project-number">04</span>
+              <h3>Number Guessing Game</h3>
+              <p>
+                A Java game challenging users to locate a randomized value within a bounded numeric range. Implemented structured attempt trackers, diagnostic boundary checks, user input readers, and game retry control flow logic.
+              </p>
+              <div class="project-tags">
+                <span>Java</span>
+                <span>Logic</span>
+                <span>Randomization</span>
+                <span>Control Flow</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/vivekreddy96" target="_blank" rel="noopener noreferrer" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" class="proj-link demo-trigger"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section section-padding section-bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Academic Timeline</span>
+          <h2 class="section-title">Education</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <div class="education-timeline">
+          <!-- Timeline Card -->
+          <div class="timeline-card">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">2024 - Present</div>
+            <div class="timeline-info">
+              <h3>B.Tech in Information Technology</h3>
+              <h4>Anurag University, Hyderabad</h4>
+              <p>
+                Enrolled in the undergraduate Information Technology curriculum. Developing foundational competencies in computer science logic, database design, object-oriented software engineering, and clean web development principles.
+              </p>
             </div>
           </div>
         </div>
@@ -619,205 +429,120 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section section-padding section-bg-alt">
+    <section id="contact" class="contact-section section-padding">
       <div class="container">
-        <div class="section-title-wrapper reveal">
-          <span class="section-subtitle">Let's Build Something Together</span>
-          <h2 class="section-title">Contact Me</h2>
-          <div class="title-underline"></div>
+        <div class="section-header">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 class="section-title">Contact</h2>
+          <div class="section-underline"></div>
         </div>
 
-        <div class="grid-2 gap-4">
-          <!-- Contact Methods Info Card -->
-          <div class="contact-info-column reveal">
-            <h3 class="contact-heading">Get In Touch</h3>
-            <p class="contact-lead-text text-muted">
-              Have an interesting project, internship opportunity, or just want to talk about core engineering, Java, or web technologies? Drop me a message! I'm always open to discussing new ideas.
+        <div class="contact-grid">
+          <!-- Contact Options -->
+          <div class="contact-info-list">
+            <h3>Let's Build Something Together</h3>
+            <p>
+              I am interested in coding collaborations, internship openings, or discussing core engineering ideas. Feel free to contact me using the options below, or by submitting a message on the form.
             </p>
-
-            <div class="contact-cards-container">
-              <!-- Call Card -->
-              <a href="tel:+918121173708" class="contact-item-card glass-card">
-                <div class="contact-icon bg-purple-glow">
-                  <i class="fa-solid fa-phone"></i>
-                </div>
-                <div class="contact-details">
-                  <h4>Phone</h4>
-                  <p>+91 8121173708</p>
-                  <span class="contact-action">Call me directly &rarr;</span>
-                </div>
-              </a>
-
-              <!-- Email Card -->
-              <a href="mailto:vr2243820@gmail.com" class="contact-item-card glass-card">
-                <div class="contact-icon bg-teal-glow">
-                  <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div class="contact-details">
-                  <h4>Email</h4>
+            
+            <div class="contact-links-list">
+              <a href="mailto:vr2243820@gmail.com" class="contact-card-item">
+                <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-card-desc">
+                  <h5>Email</h5>
                   <p>vr2243820@gmail.com</p>
-                  <span class="contact-action">Write an email &rarr;</span>
                 </div>
               </a>
 
-              <!-- LinkedIn Card -->
-              <a href="https://www.linkedin.com/in/vivek-reddy-285932323" target="_blank" rel="noopener noreferrer" class="contact-item-card glass-card">
-                <div class="contact-icon bg-blue-glow">
-                  <i class="fa-brands fa-linkedin-in"></i>
+              <a href="tel:+918121173708" class="contact-card-item">
+                <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-card-desc">
+                  <h5>Phone</h5>
+                  <p>+91 8121173708</p>
                 </div>
-                <div class="contact-details">
-                  <h4>LinkedIn</h4>
+              </a>
+
+              <a href="https://www.linkedin.com/in/vivek-reddy-285932323" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+                <div class="contact-card-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="contact-card-desc">
+                  <h5>LinkedIn</h5>
                   <p>linkedin.com/in/vivek-reddy-285932323</p>
-                  <span class="contact-action">Connect on LinkedIn &rarr;</span>
                 </div>
               </a>
 
-              <!-- Location Card -->
-              <div class="contact-item-card glass-card">
-                <div class="contact-icon bg-location-glow">
-                  <i class="fa-solid fa-location-dot"></i>
+              <a href="https://github.com/vivekreddy96" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+                <div class="contact-card-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="contact-card-desc">
+                  <h5>GitHub</h5>
+                  <p>github.com/vivekreddy96</p>
                 </div>
-                <div class="contact-details">
-                  <h4>Location</h4>
-                  <p>Hyderabad, Uppal, Telangana, India</p>
-                  <span class="contact-action-static">Active and Available</span>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
 
-          <!-- Contact Form Container -->
-          <div class="contact-form-column reveal">
-            <div class="form-wrapper glass-card">
-              <h3 class="form-heading">Send a Message</h3>
-              
-              <!-- Form Success Alert Mock -->
-              <div id="form-success" class="alert alert-success hidden">
-                <i class="fa-solid fa-circle-check"></i>
-                <div class="alert-content">
-                  <strong>Message Sent Successfully!</strong>
-                  <p>Thank you, Vivek Reddy will get back to you shortly.</p>
-                </div>
-              </div>
-              
-              <!-- Form Error Alert -->
-              <div id="form-error" class="alert alert-danger hidden">
-                <i class="fa-solid fa-circle-exclamation"></i>
-                <div class="alert-content">
-                  <strong>Oops! Form Submission Failed.</strong>
-                  <p>Please double check inputs and try again.</p>
-                </div>
-              </div>
-
-              <form id="portfolio-contact-form" novalidate>
-                <div class="form-group grid-2">
-                  <div class="input-container">
-                    <label for="form-name">Full Name <span class="text-danger">*</span></label>
-                    <div class="input-icon-wrapper">
-                      <i class="fa-regular fa-user"></i>
-                      <input type="text" id="form-name" name="name" placeholder="John Doe" required>
-                    </div>
-                    <span class="error-text" id="name-error">Please enter your name</span>
-                  </div>
-                  
-                  <div class="input-container">
-                    <label for="form-email">Email Address <span class="text-danger">*</span></label>
-                    <div class="input-icon-wrapper">
-                      <i class="fa-regular fa-envelope"></i>
-                      <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
-                    </div>
-                    <span class="error-text" id="email-error">Please enter a valid email address</span>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="input-container">
-                    <label for="form-subject">Subject</label>
-                    <div class="input-icon-wrapper">
-                      <i class="fa-regular fa-folder-open"></i>
-                      <input type="text" id="form-subject" name="subject" placeholder="Project Discussion / Internship">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="input-container">
-                    <label for="form-message">Your Message <span class="text-danger">*</span></label>
-                    <div class="input-icon-wrapper textarea-wrapper">
-                      <i class="fa-regular fa-comment-dots"></i>
-                      <textarea id="form-message" name="message" rows="5" placeholder="Tell me about your project, timeline, or inquiries..." required></textarea>
-                    </div>
-                    <span class="error-text" id="message-error">Please enter a message</span>
-                  </div>
-                </div>
-
-                <button type="submit" id="form-submit-btn" class="btn btn-primary btn-block">
-                  <span class="btn-text">Send Message <i class="fa-regular fa-paper-plane"></i></span>
-                  <span class="spinner hidden"><i class="fa-solid fa-circle-notch fa-spin"></i> Sending...</span>
-                </button>
-              </form>
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper">
+            <div id="form-success" class="form-alert alert-success hidden">
+              <i class="fa-solid fa-circle-check"></i> Message sent successfully! I'll get back to you soon.
             </div>
+            
+            <div id="form-error" class="form-alert alert-danger hidden">
+              <i class="fa-solid fa-circle-exclamation"></i> Please fill in all required fields correctly.
+            </div>
+
+            <form id="portfolio-contact-form" novalidate>
+              <div class="form-group-row">
+                <div class="form-input-container">
+                  <label for="form-name">Full Name *</label>
+                  <input type="text" id="form-name" placeholder="John Doe" required>
+                  <span class="error-msg" id="name-error">Please enter your name</span>
+                </div>
+                
+                <div class="form-input-container">
+                  <label for="form-email">Email Address *</label>
+                  <input type="email" id="form-email" placeholder="john@example.com" required>
+                  <span class="error-msg" id="email-error">Please enter a valid email address</span>
+                </div>
+              </div>
+
+              <div class="form-input-container">
+                <label for="form-subject">Subject</label>
+                <input type="text" id="form-subject" placeholder="Project collaboration / Internship inquiry">
+              </div>
+
+              <div class="form-input-container">
+                <label for="form-message">Message *</label>
+                <textarea id="form-message" rows="5" placeholder="Tell me about your project or query..." required></textarea>
+                <span class="error-msg" id="message-error">Please write a message</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit" id="form-submit-btn">
+                <span class="btn-text">Send Message <i class="fa-regular fa-paper-plane"></i></span>
+                <span class="spinner hidden"><i class="fa-solid fa-circle-notch fa-spin"></i> Sending...</span>
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-brand">
-        <a href="#home" class="logo">
-          <span class="logo-accent">&lt;</span>VR<span class="logo-accent"> /&gt;</span>
-        </a>
-        <p class="footer-desc text-muted">
-          Building fast, scalable, and responsive products while sharpening data architecture skills and solving software challenges.
-        </p>
-      </div>
-
-      <div class="footer-links">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="#home"><i class="fa-solid fa-chevron-right text-accent"></i> Home</a></li>
-          <li><a href="#about"><i class="fa-solid fa-chevron-right text-accent"></i> About Me</a></li>
-          <li><a href="#skills"><i class="fa-solid fa-chevron-right text-accent"></i> Technical Skills</a></li>
-          <li><a href="#projects"><i class="fa-solid fa-chevron-right text-accent"></i> Projects</a></li>
-          <li><a href="#contact"><i class="fa-solid fa-chevron-right text-accent"></i> Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-socials-col">
-        <h4>Connect</h4>
-        <div class="footer-socials">
-          <a href="https://www.linkedin.com/in/vivek-reddy-285932323" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="mailto:vr2243820@gmail.com" class="social-icon-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          <a href="tel:+918121173708" class="social-icon-link" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
-        </div>
-        <p class="footer-location text-muted"><i class="fa-solid fa-map-pin"></i> Hyderabad, Uppal, Telangana, India</p>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <div class="container footer-bottom-flex">
-        <p class="copyright">&copy; 2026 O. Vivek Reddy. All rights reserved.</p>
-        <p class="developed-by">Designed & Built with <i class="fa-solid fa-heart heart-pulse"></i> using HTML5, CSS3, & JS</p>
-      </div>
+    <div class="container footer-bottom">
+      <p class="copyright">&copy; 2026 O. Vivek Reddy. All rights reserved.</p>
+      <p class="design-credit">Designed & Handcrafted by Vivek Reddy using HTML, CSS, and JS</p>
     </div>
   </footer>
 
-  <!-- Floating Back To Top Button -->
-  <button id="back-to-top" class="back-to-top-btn" aria-label="Scroll back to top">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-
-  <!-- Project Live Demo Dialog Modal Mock -->
-  <div id="demo-modal" class="modal-overlay hidden" aria-modal="true" role="dialog">
-    <div class="modal-card glass-card">
-      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-      <div class="modal-header-icon"><i class="fa-solid fa-rocket"></i></div>
-      <h3>Interactive Project Demo</h3>
+  <!-- Mock Demo Indicator Modal -->
+  <div id="demo-modal" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-icon"><i class="fa-solid fa-code"></i></div>
+      <h3>Handcrafted Project Demo</h3>
       <p class="modal-text">
-        This is a demo indicator! Since this project is managed locally, the source code is completely structured. You can explore the code in Vivek's GitHub repository.
+        This is a mock project indicator. The source code is hosted and documented inside Vivek's GitHub repository. Click the button below to visit the profile.
       </p>
       <div class="modal-actions">
         <a href="https://github.com/vivekreddy96" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit GitHub Profile</a>
@@ -826,7 +551,7 @@
     </div>
   </div>
 
-  <!-- Main JavaScript File -->
+  <!-- JavaScript Modules -->
   <script type="module" src="script.js"></script>
 </body>
 </html>
